@@ -1,0 +1,19 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "description": "Portifolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React.js",
+    "Node.js",
+    "MongoDB"
+  ],
+  "author": "Leonardo Silva",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
