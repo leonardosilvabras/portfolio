@@ -25,17 +25,17 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get('/:portifolioid', (req, res) => {
-  console.log(req.params.portifolioid)
+router.get("/:portifolioid", (req, res) => {
+  console.log(req.params.portifolioid);
 
   res.json({
     sucess: true,
-    id: req.params.portifolioid
-  })
-})
+    id: req.params.portifolioid,
+  });
+});
 
-router.post('/', (req, res) => {
-  res.json(req.body)
-})
+router.post("/", (req, res) => {
+  res.json(req.body);
+});
 
 module.exports = router;
