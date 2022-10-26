@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require("express");
 const routes = require("./server/routes");
 const app = express();
@@ -13,10 +15,6 @@ app.get("/", (req, res) => {
 
 app.use("/routes", routes);
 
-const PORT = 3080;
+const PORT = process.env.PORT;
 
 app.listen(PORT);
-
-//db pass JB7dOhtVx16TpSRS
-// mongodb+srv://admin:<password>@portifolio.0lckpbs.mongodb.net/?retryWrites=true&w=majority
-//
