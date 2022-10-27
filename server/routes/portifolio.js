@@ -1,31 +1,32 @@
 const router = require("express").Router();
-const Portifolio = require('../models/Portifolio')
+const Portifolio = require("../models/Portifolio");
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
+  const portifolio = await Portifolio.find();
   res.json({
     sucess: true,
+    data: portifolio
   });
 });
 
-router.post("/", (req, res) => {
-  const portifolio = new Portifolio ({
+router.post("/", async (req, res) => {
+  const portifolio = new Portifolio({
     title: req.body.title,
     description: req.body.description,
   });
-  portifolio
-    .save()
-    .then((data) => {
-      res.json({
-        sucess: true,
-        data: data
-      })
-    })
-    .catch((err) => {
-      res.json({
-        sucess: false,
-        message: err
-      })
-    })
+
+  try {
+    const savedPortifolio = await portifolio.save();
+    res.json({
+      sucess: true,
+      data: savedPortifolio,
+    });
+  } catch (err) {
+    res.json({
+      sucess: false,
+      message: err,
+    });
+  }
 });
 
 module.exports = router;
