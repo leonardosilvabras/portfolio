@@ -1,41 +1,31 @@
 const router = require("express").Router();
+const Portifolio = require('../models/Portifolio')
 
 router.get("/", (req, res) => {
-  const data = [
-    {
-      id: 1,
-      name: "Portifolio",
-      createdAt: "24-10-2022",
-    },
-    {
-      id: 2,
-      name: "Portifolio",
-      createdAt: "24-10-2022",
-    },
-    {
-      id: 3,
-      name: "Portifolio",
-      createdAt: "24-10-2022",
-    },
-  ];
-
   res.json({
     sucess: true,
-    data: data,
-  });
-});
-
-router.get("/:portifolioid", (req, res) => {
-  console.log(req.params.portifolioid);
-
-  res.json({
-    sucess: true,
-    id: req.params.portifolioid,
   });
 });
 
 router.post("/", (req, res) => {
-  res.json(req.body);
+  const portifolio = new Portifolio ({
+    title: req.body.title,
+    description: req.body.description,
+  });
+  portifolio
+    .save()
+    .then((data) => {
+      res.json({
+        sucess: true,
+        data: data
+      })
+    })
+    .catch((err) => {
+      res.json({
+        sucess: false,
+        message: err
+      })
+    })
 });
 
 module.exports = router;
