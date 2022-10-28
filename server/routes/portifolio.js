@@ -3,18 +3,17 @@ const Portifolio = require("../models/Portifolio");
 
 router.get("/", async (req, res) => {
   try {
-    const portifolios = await Portifolio.find()
+    const portifolio = await Portifolio.find();
     res.json({
       sucess: true,
-      data: portifolio
-    })
+      data: portifolio,
+    });
   } catch (err) {
     res.json({
       sucess: false,
-      message: err
-    })
+      message: err,
+    });
   }
-  
 });
 
 router.post("/", async (req, res) => {
