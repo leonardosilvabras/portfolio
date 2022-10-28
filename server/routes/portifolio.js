@@ -1,6 +1,28 @@
 const router = require("express").Router();
 const Portifolio = require("../models/Portifolio");
 
+//posts
+router.post("/", async (req, res) => {
+  const portifolio = new Portifolio({
+    title: req.body.title,
+    description: req.body.description,
+  });
+
+  try {
+    const savedPortifolio = await portifolio.save();
+    res.json({
+      sucess: true,
+      data: savedPortifolio,
+    });
+  } catch (err) {
+    res.json({
+      sucess: false,
+      message: err,
+    });
+  }
+});
+
+//gets
 router.get("/", async (req, res) => {
   try {
     const portifolio = await Portifolio.find();
@@ -32,17 +54,21 @@ router.get("/:slug", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
-  const portifolio = new Portifolio({
-    title: req.body.title,
-    description: req.body.description,
-  });
-
+//update
+router.patch("/:slug", async (req, res) => {
   try {
-    const savedPortifolio = await portifolio.save();
+    const updatedPortifolio = await Portifolio.updateOne(
+      {
+        slug: req.params.slug,
+      },
+      {
+        title: req.body.title,
+        description: req.body.description,
+      }
+    );
+
     res.json({
       sucess: true,
-      data: savedPortifolio,
     });
   } catch (err) {
     res.json({
@@ -51,5 +77,7 @@ router.post("/", async (req, res) => {
     });
   }
 });
+
+//delete
 
 module.exports = router;
