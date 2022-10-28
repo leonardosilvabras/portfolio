@@ -82,5 +82,24 @@ router.patch("/:slug", async (req, res) => {
 });
 
 //delete
+router.delete("/:slug", async (req, res) => {
+  try {
+    const deletedPortifolio = await Portifolio.deleteOne(
+      {
+        slug: req.params.slug,
+      }
+    );
+
+    res.json({
+      sucess: true,
+      deleted: deletedPortifolio.deletedCount
+    });
+  } catch (err) {
+    res.json({
+      sucess: false,
+      message: err,
+    });
+  }
+});
 
 module.exports = router;
