@@ -62,13 +62,16 @@ router.patch("/:slug", async (req, res) => {
         slug: req.params.slug,
       },
       {
-        title: req.body.title,
-        description: req.body.description,
+        $set: {
+          title: req.body.title,
+          description: req.body.description,
+        },
       }
     );
 
     res.json({
       sucess: true,
+      updated: updatedPortifolio.matchedCount
     });
   } catch (err) {
     res.json({
