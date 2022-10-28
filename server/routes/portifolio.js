@@ -71,7 +71,7 @@ router.patch("/:slug", async (req, res) => {
 
     res.json({
       sucess: true,
-      updated: updatedPortifolio.matchedCount
+      updated: updatedPortifolio.matchedCount,
     });
   } catch (err) {
     res.json({
@@ -84,15 +84,13 @@ router.patch("/:slug", async (req, res) => {
 //delete
 router.delete("/:slug", async (req, res) => {
   try {
-    const deletedPortifolio = await Portifolio.deleteOne(
-      {
-        slug: req.params.slug,
-      }
-    );
+    const deletedPortifolio = await Portifolio.deleteOne({
+      slug: req.params.slug,
+    });
 
     res.json({
       sucess: true,
-      deleted: deletedPortifolio.deletedCount
+      deleted: deletedPortifolio.deletedCount,
     });
   } catch (err) {
     res.json({
