@@ -14,7 +14,7 @@ const HomeColumn = () => {
     top: 0;
     left: 0;
 
-    padding: 1rem;
+    padding-left: 3rem;
   `;
 
   const Container = styled.div`
@@ -22,7 +22,6 @@ const HomeColumn = () => {
     justify-content: center;
     align-items: flex-end;
     height: 50vh;
-    padding-bottom: 3rem;
   `;
 
   const Science = styled.h3`
@@ -45,13 +44,16 @@ const HomeColumn = () => {
 
     text-align: center;
     text-transform: uppercase;
+
+    padding-bottom: 3rem;
   `;
+
   return (
     <Column>
       <Container>
         <Science>
-          <span style={{ color: PrimaryColor }}>Ciência da</span>
-          <br />
+          <span style={{ color: PrimaryColor }}>Ciência</span>
+          da <br />
           Computação
         </Science>
       </Container>
@@ -71,6 +73,7 @@ const Japan = () => {
     top: 10rem;
     right: 15rem;
   `;
+
   return (
     <JapanContainer>
       <img src={JapanImage} alt="Japan Text" />
@@ -79,24 +82,28 @@ const Japan = () => {
 };
 
 const Home = () => {
+  const Page = styled.div`
+    min-width: 100vw;
+    min-height: 100vh;
+  `;
+
+  const HomeContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  `;
+
   return (
-    <div>
+    <Page>
       <Header/>
       <HomeContainer>        
         <HomeColumn />
         <GloboMain />
         <Japan />
       </HomeContainer>
-    </div>
-   
+    </Page>
   );
 };
-
-const HomeContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-`;
 
 export default Home;
