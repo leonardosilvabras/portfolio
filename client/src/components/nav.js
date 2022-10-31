@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 import { PrimaryColor } from "../colors";
 
 const Item = (name) => {
   return (
     <Button>
-      <a href='#'>
+      <a href="#">
         <span style={{ color: PrimaryColor }}>#</span>
         {name}
       </a>
@@ -15,20 +15,24 @@ const Item = (name) => {
 const Nav = () => {
   return (
     <Menu>
-      {Item("Inicio")}
-      {Item("Sobre")}
-      {Item("Projetos")}
-      {Item("Contato")}
+      <Container>
+        {Item("Inicio")}
+        {Item("Sobre")}
+        {Item("Projetos")}
+        {Item("Contato")}
+      </Container>
     </Menu>
   );
 };
 
 const Menu = styled.div`
   position: fixed;
-  top: 25%;
+  z-index: 2;
   right: 0;
+  margin-right: 1rem;
 
-  height: 50%;
+  height: 100vh;
+  width: 5%;
 
   display: flex;
   flex-direction: column;
@@ -38,19 +42,27 @@ const Menu = styled.div`
   list-style: none;
 `;
 
-const Button = styled.li`
-  width: 92px;
-  height: 30px;
-  margin: 3rem;
+const Container = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 
-  font-family: 'Alatsi';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-
-  text-transform: uppercase;
+  list-style-type: none;
+  padding: 2rem;
 
   transform: rotate(90deg);
+`
+
+const Button = styled.li`
+  margin: 0 1rem 0 1rem;
+
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1rem;
+
+  text-transform: uppercase;
 
   a {
     text-decoration: none;
