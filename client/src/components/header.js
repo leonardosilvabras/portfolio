@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Container>
       <Git>
-        <img src={GitImage} />
+        <img src={GitImage} alt="GitImage"/>
       </Git>
       <TitleContainer>
         <Title>
@@ -33,6 +33,11 @@ const Git = styled.div`
   img {
     width: 50px;
     height: 50px;
+
+    z-index: 2;
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 

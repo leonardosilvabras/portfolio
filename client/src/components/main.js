@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { PrimaryColor } from "../colors";
 import GloboMain from "./globoMain";
 import JapanImage from "../assets/images/japan.png";
+import Header from "./header";
 
 const HomeColumn = () => {
   const Column = styled.div`
@@ -79,11 +80,15 @@ const Japan = () => {
 
 const Home = () => {
   return (
-    <HomeContainer>
-      <HomeColumn />
-      <GloboMain />
-      <Japan />
-    </HomeContainer>
+    <div>
+      <Header/>
+      <HomeContainer>        
+        <HomeColumn />
+        <GloboMain />
+        <Japan />
+      </HomeContainer>
+    </div>
+   
   );
 };
 

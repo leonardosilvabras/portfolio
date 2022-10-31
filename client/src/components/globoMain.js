@@ -14,6 +14,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(3,174,238,.1);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(3,174,238,.1);
+  box-shadow: 0px 0px 25px 0px rgba(3,174,238,.1);
+
+  border-radius: 50%;
+
   img {
     width: 500px;
   }
