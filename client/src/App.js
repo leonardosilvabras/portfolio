@@ -1,4 +1,4 @@
-import Home from "./components/main";
+import Home from "./pages/main";
 import Nav from "./components/nav";
 
 function App() {

@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Column from './column'
-import GloboMain from "./globoMain";
+import Column from '../components/column'
+import GloboMain from "../components/globoMain";
 import JapanImage from "../assets/images/japan.png";
-import Header from "./header";
+import Header from "../components/header";
 
 const Japan = () => {
   const JapanContainer = styled.div`
@@ -36,7 +36,7 @@ const Home = () => {
   `;
 
   return (
-    <Page>
+    <Page id="home">
       <Header/>
       <HomeContainer>        
         <Column />

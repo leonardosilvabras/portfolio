@@ -9,4 +9,14 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   background-color: #101010;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #03AEEE;
 }/*# sourceMappingURL=index.css.map */
