@@ -12,7 +12,7 @@ const column = () => {
     left: 0;
 
     height: 100vh;
-    width: 20vw;
+    padding: 0 2rem 0 2rem;
   `;
 
   const Content = styled.div`

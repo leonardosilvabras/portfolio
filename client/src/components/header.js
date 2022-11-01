@@ -9,6 +9,11 @@ const Header = () => {
     justify-content: space-between;
     width: 100%;
     padding: 3rem 6rem 3rem 6rem;
+
+    @media (max-width: 500px) {
+      justify-content: center;
+    }
+
   `;
 
   const Git = styled.div`
@@ -32,6 +37,10 @@ const Header = () => {
         height: 40px;
       }
     }
+
+    @media (max-width: 500px) {
+      margin-right: 2rem;
+    }
   `;
 
   const TitleContainer = styled.div`
@@ -43,6 +52,10 @@ const Header = () => {
       h2 {
         font-size: 24px;
       }
+    }
+
+    @media (max-width: 500px) {
+      margin-left: 2rem;
     }
   `;
 

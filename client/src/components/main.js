@@ -8,7 +8,7 @@ const Japan = () => {
   const JapanContainer = styled.div`
     position: fixed;
     top: 20%;
-    right: 13.5%;
+    right: 16%;
   `;
 
   return (
