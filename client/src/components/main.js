@@ -9,6 +9,10 @@ const Japan = () => {
     position: fixed;
     top: 20%;
     right: 16%;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   `;
 
   return (

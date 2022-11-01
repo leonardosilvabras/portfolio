@@ -15,8 +15,8 @@ const GloboMain = () => {
     img {
       width: 35%;
 
-      min-width: 15rem;
-      min-height: 15rem;
+      min-width: 17rem;
+      min-height: 17rem;
 
       border-radius: 50%;
 
