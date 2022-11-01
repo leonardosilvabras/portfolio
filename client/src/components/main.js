@@ -6,11 +6,11 @@ import Header from "./header";
 
 const Japan = () => {
   const JapanContainer = styled.div`
-    position: fixed;
+    position: absolute;
     top: 20%;
     right: 16%;
 
-    @media (max-width: 600px) {
+    @media (max-width: 850px) {
       display: none;
     }
   `;
@@ -24,7 +24,7 @@ const Japan = () => {
 
 const Home = () => {
   const Page = styled.div`
-    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
   `;
 

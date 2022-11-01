@@ -22,8 +22,8 @@ const Header = () => {
     align-items: center;
 
     img {
-      width: 50px;
-      height: 50px;
+      width: 3.1rem;
+      height: 3.1rem;
 
       z-index: 2;
       &:hover {
@@ -33,13 +33,20 @@ const Header = () => {
 
     @media (max-width: 600px) {
       img {
-        width: 40px;
-        height: 40px;
+        width: 2.7rem;
+        height: 2.7rem;
       }
     }
 
     @media (max-width: 500px) {
       margin-right: 2rem;
+    }
+
+    @media (max-width: 350px) {
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
     }
   `;
 
@@ -50,12 +57,18 @@ const Header = () => {
 
     @media (max-width: 600px) {
       h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
       }
     }
 
     @media (max-width: 500px) {
       margin-left: 2rem;
+    }
+
+    @media (max-width: 350px) {
+      h2 {
+        font-size: 1rem;
+      }
     }
   `;
 
