@@ -10,6 +10,8 @@ const Japan = () => {
     top: 20%;
     right: 16%;
 
+    img { height: 70rem; }
+
     @media (max-width: 850px) {
       display: none;
     }
