@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { PrimaryColor } from "../colors";
 import Image from '../assets/images/vetor.png'
+import Tecs from '../assets/images/tecs.png'
 
 const About = () => {
   const Content = styled.div`
@@ -28,21 +29,27 @@ const About = () => {
   `;
 
   const Vetor = styled.div`
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 
     width: 100%;
-    height: 100vh;
+    margin: 3rem 0 3rem 0;
 
     img {
         width: 40%;
     }
   `;
 
+  const Tecnologias = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `;
+
   return (
-    <Content>
+    <Content id="About">
       <TitleContainer>
         <Title>
           <span style={{ color: PrimaryColor }}>#</span>
@@ -50,8 +57,11 @@ const About = () => {
         </Title>
       </TitleContainer>
       <Vetor>
-        <img src={Image} />
+        <img src={Image} alt="Imagem vetorial"/>
       </Vetor>
+      <Tecnologias>
+        <img src={Tecs} alt="tecnologias" />
+      </Tecnologias>
     </Content>
   );
 };
