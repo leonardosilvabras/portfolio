@@ -86,7 +86,7 @@ const column = () => {
       <ColumnWeb>
         <ContentWeb>
           <Science>
-            <span style={{ color: PrimaryColor }}>Ciência</span>
+            <span style={{ color: PrimaryColor }}>Ciência </span>
             da <br />
             Computação
           </Science>

@@ -66,7 +66,7 @@ const Nav = () => {
     <Menu id="nav">
       <Container>
         {Item("Inicio", "#home")}
-        {Item("Sobre")}
+        {Item("Sobre", "#About")}
         {Item("Projetos")}
         {Item("Contato")}
       </Container>

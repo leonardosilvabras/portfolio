@@ -13,7 +13,7 @@ const GloboMain = () => {
     align-items: center;
 
     img {
-      width: 35%;
+      width: 32.5%;
 
       min-width: 25rem;
       min-height: 25rem;

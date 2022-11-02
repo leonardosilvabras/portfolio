@@ -11,6 +11,10 @@ body {
   background-color: #101010;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -18,5 +22,5 @@ body::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #03AEEE;
+  background-color: rgba(0, 0, 0, 0);
 }/*# sourceMappingURL=index.css.map */
