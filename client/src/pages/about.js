@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { PrimaryColor } from "../colors";
 import Image from "../assets/images/vetor.png";
-import Tecs from "../assets/images/tecs.png";
+import Tecs from '../components/tecnologias';
 
 const About = () => {
   const Content = styled.div`
@@ -79,18 +79,6 @@ const About = () => {
     }
   `;
 
-  const Tecnologias = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      width: 50%;
-      min-width: 15rem;
-    }
-  `;
-
   const Gestao = styled.h3`
     top: 150vh;
     left: 1rem;
@@ -130,9 +118,7 @@ const About = () => {
       <Vetor>
         <img src={Image} alt="Imagem vetorial" />
       </Vetor>
-      <Tecnologias>
-        <img src={Tecs} alt="tecnologias" />
-      </Tecnologias>
+      <Tecs />
     </Content>
   );
 };
