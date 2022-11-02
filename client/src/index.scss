@@ -11,6 +11,8 @@ body {
   background-color: #101010;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
   &::-webkit-scrollbar {
     width: .5rem;
@@ -21,7 +23,7 @@ body {
   }
   
   &::-webkit-scrollbar-thumb {
-    background-color: #03AEEE; 
+    background-color: rgba(0,0,0,0); 
   }
 }
 
