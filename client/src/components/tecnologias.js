@@ -16,7 +16,7 @@ const Tecs = () => {
   const Item = () => {
     const Items = Styled.div`
         position: absolute;
-        top: 185vh;
+        top: 195vh;
 
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -24,7 +24,7 @@ const Tecs = () => {
 
         @media (max-width: 800px) {
             grid-template-columns: repeat(7, 1fr); 
-            top: 175vh;
+            top: 180vh;
         }
 
         @media (max-width: 700px) {

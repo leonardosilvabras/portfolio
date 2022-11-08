@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { PrimaryColor } from "../colors";
 import Image from "../assets/images/vetor.png";
-import Tecs from '../components/tecnologias';
+import Tecs from "../components/tecnologias";
 
 const About = () => {
   const Content = styled.div`
@@ -17,29 +17,27 @@ const About = () => {
     justify-content: center;
     align-items: center;
 
-    
+    margin-top: 5rem;
   `;
 
-  
   const Title = styled.h2`
-    margin-top: 3rem;
-
     font-family: "Audiowide";
     font-style: normal;
     font-weight: 400;
     font-size: 2rem;
     text-transform: uppercase;
     color: white;
-   
   `;
 
   const Vetor = styled.div`
     width: 100%;
-    height: 100%;
-    
+    height: 100vh;
+    position: absolute;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     margin: 3rem 0 3rem 0;
 
     img {
@@ -54,31 +52,45 @@ const About = () => {
     }
 
     @media (max-width: 700px) {
-      img { min-width: 28rem; }
+      img {
+        min-width: 29rem;
+      }
     }
 
     @media (max-width: 600px) {
-      img { min-width:	27rem; }
+      img {
+        min-width: 28rem;
+      }
     }
 
     @media (max-width: 500px) {
-      img { min-width:	26rem; }
+      img {
+        min-width: 27rem;
+      }
     }
 
     @media (max-width: 480px) {
-      img { min-width:	25rem; }
+      img {
+        min-width: 26rem;
+      }
     }
 
     @media (max-width: 470px) {
-      img { min-width:	22rem; }
+      img {
+        min-width: 23rem;
+      }
     }
 
     @media (max-width: 420px) {
-      img { min-width:	19rem; }
+      img {
+        min-width: 21rem;
+      }
     }
 
     @media (max-width: 390px) {
-      img { min-width:	17rem; }
+      img {
+        min-width: 19rem;
+      }
     }
   `;
 
@@ -112,13 +124,13 @@ const About = () => {
           <span style={{ color: PrimaryColor }}>#</span>
           Tecnologias
         </Title>
-        
-      </TitleContainer> 
+      </TitleContainer>
       <Gestao>
         <span style={{ color: PrimaryColor }}>Gestão </span>
-        da Tecnologia<br />
+        da Tecnologia
+        <br />
         da Informação
-      </Gestao>     
+      </Gestao>
       <Vetor>
         <img src={Image} alt="Imagem vetorial" />
       </Vetor>
