@@ -26,6 +26,11 @@ const About = () => {
     font-size: 2rem;
     text-transform: uppercase;
     color: white;
+
+    
+    @media (max-width: 850px) {
+      margin-top: 1rem;
+    }
   `;
 
   const Vetor = styled.div`

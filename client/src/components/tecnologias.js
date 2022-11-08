@@ -15,6 +15,9 @@ import Mongodb from "../assets/images/mongodb.png";
 const Tecs = () => {
   const Item = () => {
     const Items = Styled.div`
+        position: absolute;
+        top: 185vh;
+
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 1rem;
@@ -29,6 +32,7 @@ const Tecs = () => {
 
         @media (max-width: 600px) {
             grid-template-columns: repeat(5, 1fr); 
+            top: 175vh;
         }
 
         @media (max-width: 500px) {
