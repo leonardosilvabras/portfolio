@@ -27,7 +27,7 @@ const Japan = () => {
 const Home = () => {
   const Page = styled.div`
     max-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
   `;
 
   const HomeContainer = styled.div`

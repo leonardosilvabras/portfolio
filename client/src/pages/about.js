@@ -16,7 +16,11 @@ const About = () => {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
   `;
+
+  
   const Title = styled.h2`
     margin-top: 3rem;
 
@@ -26,14 +30,13 @@ const About = () => {
     font-size: 2rem;
     text-transform: uppercase;
     color: white;
-
-    
-    @media (max-width: 850px) {
-      margin-top: 1rem;
-    }
+   
   `;
 
   const Vetor = styled.div`
+    width: 100%;
+    height: 100%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,39 +53,32 @@ const About = () => {
       margin: 3rem 0 5rem 0;
     }
 
-    @media (max-width: 550px) {
-      img {
-        min-width: 20rem;
-        min-height: 20rem;
-      }
+    @media (max-width: 700px) {
+      img { min-width: 28rem; }
     }
 
-    @media (max-width: 440px) {
-      img {
-        min-width: 17rem;
-        min-height: 17rem;
-      }
+    @media (max-width: 600px) {
+      img { min-width:	27rem; }
     }
 
-    @media (max-width: 380px) {
-      img {
-        min-width: 15rem;
-        min-height: 15rem;
-      }
+    @media (max-width: 500px) {
+      img { min-width:	26rem; }
     }
 
-    @media (max-width: 340px) {
-      img {
-        min-width: 13rem;
-        min-height: 13rem;
-      }
+    @media (max-width: 480px) {
+      img { min-width:	25rem; }
     }
 
-    @media (max-width: 300px) {
-      img {
-        min-width: 11rem;
-        min-height: 11rem;
-      }
+    @media (max-width: 470px) {
+      img { min-width:	22rem; }
+    }
+
+    @media (max-width: 420px) {
+      img { min-width:	19rem; }
+    }
+
+    @media (max-width: 390px) {
+      img { min-width:	17rem; }
     }
   `;
 
@@ -100,8 +96,8 @@ const About = () => {
     text-align: center;
     text-transform: uppercase;
 
-    @media (max-width: 850px) {
-      margin: 5rem 10rem 5rem 3rem;
+    @media (max-width: 900px) {
+      display: none;
     }
 
     @media (max-width: 400px) {
@@ -116,12 +112,13 @@ const About = () => {
           <span style={{ color: PrimaryColor }}>#</span>
           Tecnologias
         </Title>
-        <Gestao>
+        
+      </TitleContainer> 
+      <Gestao>
         <span style={{ color: PrimaryColor }}>Gestão </span>
         da Tecnologia<br />
         da Informação
-      </Gestao>
-      </TitleContainer>      
+      </Gestao>     
       <Vetor>
         <img src={Image} alt="Imagem vetorial" />
       </Vetor>

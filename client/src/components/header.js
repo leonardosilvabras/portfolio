@@ -8,6 +8,7 @@ const Header = () => {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 5rem;
     padding: 3rem 6rem 3rem 6rem;
 
     @media (max-width: 500px) {

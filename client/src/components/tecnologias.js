@@ -24,19 +24,11 @@ const Tecs = () => {
 
         @media (max-width: 800px) {
             grid-template-columns: repeat(7, 1fr); 
+            top: 175vh;
         }
 
         @media (max-width: 700px) {
             grid-template-columns: repeat(6, 1fr); 
-        }
-
-        @media (max-width: 600px) {
-            grid-template-columns: repeat(5, 1fr); 
-            top: 175vh;
-        }
-
-        @media (max-width: 500px) {
-            grid-template-columns: repeat(4, 1fr); 
         }
     `;
     const Content = Styled.div`
@@ -47,6 +39,10 @@ const Tecs = () => {
         img {
             width: 3rem;
         }
+
+        @media (max-width: 600px) {
+          img { width: 2.5rem; }
+      }
     `;
 
     return (
