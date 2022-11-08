@@ -32,15 +32,17 @@ const About = () => {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 100%;
     margin: 3rem 0 3rem 0;
 
     img {
-      width: 37.5%;
+      width: 40%;
+      heigth: auto;
 
-      min-width: 25rem;
-      min-height: 25rem;
+      min-width: 34rem;
+    }
+
+    @media (max-width: 850px) {
+      margin: 3rem 0 5rem 0;
     }
 
     @media (max-width: 550px) {
@@ -109,12 +111,12 @@ const About = () => {
           <span style={{ color: PrimaryColor }}>#</span>
           Tecnologias
         </Title>
-      </TitleContainer>
-      <Gestao>
+        <Gestao>
         <span style={{ color: PrimaryColor }}>Gestão </span>
         da Tecnologia<br />
         da Informação
       </Gestao>
+      </TitleContainer>      
       <Vetor>
         <img src={Image} alt="Imagem vetorial" />
       </Vetor>

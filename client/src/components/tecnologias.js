@@ -15,9 +15,9 @@ import Mongodb from "../assets/images/mongodb.png";
 const Tecs = () => {
   const Item = () => {
     const Items = Styled.div`
-        max-width: 50%;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        grid-gap: 1rem;
 
         @media (max-width: 800px) {
             grid-template-columns: repeat(7, 1fr); 
